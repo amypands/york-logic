@@ -27,7 +27,14 @@ function MyApp({ Component, pageProps }) {
         </li>
       </ul>
     </div>
-  </nav> <Component {...pageProps} /> </>)
+  </nav> <Component {...pageProps} />
+    <footer>
+      <div className="container yorkfooter">
+        <p><strong> &copy; York Logic Limited - All rights reserved</strong></p>
+      </div >
+    </footer> </>)
+
 }
+
 
 export default MyApp
