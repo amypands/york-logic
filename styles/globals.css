@@ -1,8 +1,10 @@
+@import url('https://rsms.me/inter/inter.css');
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
@@ -48,26 +50,19 @@ a {
   background-color:#fff;
 }
 
-.aboutmain {
-  background-color: #1A74EA;
+.about {
   min-height: 100vh;
   display: flex;
-  align-items: center;
-  padding: 4rem 0 4rem 0;
+  flex-direction: column;
+}
 
+.aboutmain {
+  background-color: #1A74EA;
+  flex-grow: 1;
 }
 
 .aboutmain h1 {
   color: #fff;
-}
-
-.aboutmain h1 a {
-  border-bottom: 2px dotted #FFF;
-}
-
-.aboutmain h1 a:hover {
-  color: #fff;
-  border: none;
 }
 
 .aboutmain h2 {
@@ -84,6 +79,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  z-index: 10;
 }
 
 .yorkimage {
@@ -105,6 +101,10 @@ a {
 .navbar {
   position: sticky;
   top:0;
+  z-index: 999;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2), 0 25px 50px 0 rgba(0,0,0,0.1);
 }
 
 .yorkdescription {
@@ -121,3 +121,12 @@ a {
 .yorkfooter{
   text-align: center;
 }
+
+.hometext {
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2), 0 25px 50px 0 rgba(0,0,0,0.1);
+  padding: 3rem;
+  border-radius:24px;
+}
+
