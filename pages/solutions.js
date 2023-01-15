@@ -5,12 +5,56 @@ import { HeroBanner, Button, Card } from '../components'
 
 
 export default function About() {
-    const certList = ["Google Cloud Certified Professional Cloud Architect",
-        "Google Cloud Certified Professional Cloud Network Engineer",
-        "Google Cloud Certified Professional Cloud Security Engineer",
-        "CNCF Certified Kubernetes Administrator",
-        "CNCF Certified Kubernetes Developer",
-        "TOGAF"
+    const content = [
+        {
+            title: "Software Architecture and modernization",
+            bullets: [
+                "Software architecture solutions using the state of the art practices, tools and technologies. Collaborative solution architecting. Our team has experience architecting solutions in Telco, Finance, Retail and Technology companies.",
+                "Legacy application rearchitecting and modernization"
+            ]
+        },
+        {
+            title: "Cloud Infrastructure Architecture",
+            bullets: [
+                "Design network in cloud from scratch",
+                "Onboard and stand up a Google Cloud Platform organization from scratch",
+                "Setup ApigeeX",
+                "Services and security design",
+                "On-premises to cloud migration",
+                "Microservices, Kubernetes, Istio Service Mesh"
+            ],
+        },
+        {
+            title: "Cloud Migration",
+            bullets: [
+                "legacy application and infrastructure rearchitecting and migration to Google cloud",
+                "Find the best solution with plan for future grown.  It can be lift-and-shift or rearchitecting and refitting"
+            ]
+        },
+        {
+            title: "Cloud Native",
+            bullets: [
+                "Leverage our experience and expertise in architecting and implementing cloud native solutions in Google's GKE",
+                "Transform your legacy application into scalable cloud native microservices",
+                "Scalable microservices and Istio service mesh"
+            ]
+        },
+        {
+            title: "DevOps",
+            bullets: [
+                "GitLab, GitHub, GCP cloud build",
+                "CI/CD setup and consulting",
+                "Cloud Monitoring setup",
+                "Systems administration and on going support",
+                "Terraform IaC"
+            ]
+        },
+        {
+            title: "Site Reliability Engineering (SRE)",
+            bullets: [
+                "Monitoring, business continuity consulting and implementation"
+            ]
+        }
     ]
     return (
         <>
@@ -24,125 +68,84 @@ export default function About() {
             {/**
              * Page Content
              */}
-            <div className="container">
-                <h1>About Us</h1>
-            </div>
-            <div className="aboutmain">
-                <div className="container">
-                    <h2 className="fw-bold my-4">Certifications</h2>
-                    <div className="row g-4">
-                        {
-                            certList.map((certName) => {
-                                return (
-
-                                    <div className="col-lg-3 col-md-3 col-sm-1">
-                                        <Card>
-                                            {certName}
-                                        </Card>
-                                    </div>
+            <div className="solution-content">
+                <div className="container mt-4">
+                    <div className="row">
+                        <div className="col-md-6 pe-5 pt-5 solution-content-left">
+                            <h1 className="solution-title"><strong>Solutions</strong></h1>
+                            <div className="solution-line mb-3"></div>
+                            <h2>Helping you unlock the full potential of Google Cloud Platform for your business</h2>
+                        </div>
+                        <div className="col-md-6 solution-content-right ps-5 pt-5">
+                            <h1 className="solution-title invisible"><strong>Solutions</strong></h1>
+                            <div className="solution-line mb-3"></div>
+                            <div>{
+                                content.map(
+                                    (contentItem) => {
+                                        return (
+                                            <div className="mb-5">
+                                                <h3><strong>{contentItem.title}</strong></h3>
+                                                <ul>
+                                                    {
+                                                        contentItem.bullets.map(
+                                                            (bulletPoints) => {
+                                                                return (
+                                                                    <li>
+                                                                        {
+                                                                            bulletPoints
+                                                                        }
+                                                                    </li>
+                                                                )
+                                                            }
+                                                        )
+                                                    }
+                                                </ul>
+                                            </div>
+                                        )
+                                    }
                                 )
                             }
-                            )
-                        }
+                            </div>
+                        </div>
                     </div>
-
-                    <h2 className="fw-bold my-4">Our Competencies</h2>
-
-                    <div className="row gx-4">
-                        <div className="col-lg-3 col-md-3 col-sm-1">
-                            <Card cardtitle="GCP and Kubernetes" cardsubtitle="">
-                                <ul>
-                                    <li>
-                                        Applications and infrastructure modernisation
-                                    </li>
-                                    <li>
-                                        Legacy applications re-architecting and migration to cloud
-                                    </li>
-                                    <li>
-                                        Green field architecture
-                                    </li>
-                                    <li>
-                                        New infrastructure through Terraform IaC, networking, security setup
-                                    </li>
-                                </ul>
-
-                            </Card>
-                        </div>
-                        <div className="col-lg-3 col-md-3 col-sm-1">
-                            <Card cardtitle="DevOps" cardsubtitle="">
-                                <ul>
-                                    <li>GitLab, GitHub, GCP cloud build</li>
-                                    <li>CI/CD setup and consulting</li>
-                                    <li>Monitoring setup</li>
-                                    <li>Systems administration and on going support</li>
-                                </ul>
-
-                            </Card>
-                        </div>
-                        <div className="col-lg-3 col-md-3 col-sm-1">
-                            <Card cardtitle="SRE support" cardsubtitle="">
-                                <ul>
-                                    <li>
-                                        Monitoring, business continuity consulting and implementation
-                                    </li>
-                                </ul>
-
-                            </Card>
-                        </div>
-
-                    </div>
-
-                    <h2 className="fw-bold my-4">Enterprise Clients</h2>
-                    <div className="row gx-4">
-                        <div className="col-lg-3 col-md-3 col-sm-1">
-                            <Card cardtitle="Major Retailor in Canada" cardsubtitle="">
-                                <ul>
-                                    <li>
-                                        GCP, Kubernetes, GitLab, Apigee -  architecture and DevOps consulting and implementation
-                                    </li>
-                                    <li>
-                                        Monolith to microservices migration
-                                    </li>
-                                </ul>
-
-                            </Card>
-                        </div>
-                        <div className="col-lg-3 col-md-3 col-sm-1">
-                            <Card cardtitle="Credit Reporting Company" cardsubtitle="">
-                                <ul>
-                                    <li>
-                                        GCP, Kubernetes, BigData, Apigee – architecture and consulting
-                                    </li>
-                                </ul>
-
-                            </Card>
-                        </div>
-                        <div className="col-lg-3 col-md-3 col-sm-1">
-                            <Card cardtitle="Financial Enterprise" cardsubtitle="">
-                                <ul>
-                                    <li>
-                                        Ground up setup of GCP organization, networking and infrastructure
-                                    </li>
-                                    <li>
-
-                                        Solutioning and architecture for a new products on GCP and Kubernetes
-                                    </li>
-                                    <li>
-                                        Devops setup and ongoing support
-                                    </li>
-                                    <li>
-                                        ApigeeX setup, architecture and onboarding
-                                    </li>
-                                </ul>
-
-                            </Card>
-                        </div>
-
-                    </div>
-
-
                 </div>
             </div>
+            <div className="row solution-row">
+                <div className="col-md-6 solution-left"></div>
+                <div className="col-md-6 solution-right">
+                    <div className="col-md-6 solution-content-right ps-5 pt-5">
+                        <div className="invisible">
+                            {
+                                content.map(
+                                    (contentItem) => {
+                                        return (
+                                            <div className="mb-4">
+                                                <h3><strong>{contentItem.title}</strong></h3>
+                                                <ul>
+                                                    {
+                                                        contentItem.bullets.map(
+                                                            (bulletPoints) => {
+                                                                return (
+                                                                    <li>
+                                                                        {
+                                                                            bulletPoints
+                                                                        }
+                                                                    </li>
+                                                                )
+                                                            }
+                                                        )
+                                                    }
+                                                </ul>
+                                            </div>
+                                        )
+                                    }
+                                )
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </>
     )
 }

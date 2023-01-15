@@ -14,17 +14,17 @@ function MyApp({ Component, pageProps }) {
               <a className="nav-link" href="solutions">Solutions </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Services</a>
+              <a className="nav-link" href="services">Services</a>
             </li>
 
             <li className="nav-item">
-              <a className="nav-link" href="#">Clients</a>
+              <a className="nav-link" href="clients">Clients</a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="about">About Us</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Contact</a>
+              <a className="nav-link" href="mailto:info@yorklogic.com">Contact</a>
             </li>
           </ul>
         </div></div>
