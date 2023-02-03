@@ -11,7 +11,7 @@ export default function Home() {
         <div className="row gx-0 yorkheader">
           <div className="col-md-6 leftcolumn">
             <div className="hometext">
-              <h1><strong>York Logic Ltd.</strong></h1>
+              <h1><strong>York Logic Limited</strong></h1>
               <div className="row">
                 <div className="col-md-4 yorkdescription">
                   <p><strong>Simplify Technology</strong></p>
