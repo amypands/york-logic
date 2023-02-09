@@ -90,7 +90,7 @@ export default function Clients() {
           </div>
         </div>
       </div>
-      <div className="row solution-row d-none d-md-block">
+      <div className="row solution-row">
         <div className="col-md-6 solution-left red"></div>
         <div className="col-md-6 solution-right">
           <div className="col-md-6 solution-content-right ps-5 pt-5">
