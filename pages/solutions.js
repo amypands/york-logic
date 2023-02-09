@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { HeroBanner, Button, Card } from "../components";
 
-export default function About() {
+export default function Solutions() {
   const content = [
     {
       title: "Software Architecture and modernization",
@@ -118,11 +118,15 @@ export default function About() {
       <div className="row solution-row">
         <div className="col-md-6 solution-left"></div>
         <div className="col-md-6 solution-right">
-          <div className="col-md-6 solution-content-right ps-5 pt-5">
-            <div className="invisible">
+          <div className="mt-5 solution-content-right ps-5 pt-5">
+            <div className="invisible pt-5 mt-5">
+              <h1 className="solution-title">
+                <strong>Solutions</strong>
+              </h1>
+              <div className="solution-line mb-3"></div>
               {content.map((contentItem) => {
                 return (
-                  <div className="mb-4">
+                  <div className="mb-5">
                     <h3>
                       <strong>{contentItem.title}</strong>
                     </h3>

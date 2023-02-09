@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { HeroBanner, Button, Card } from "../components";
 
-export default function Services() {
+export default function Clients() {
   const content = [
     {
       title: "Major Retailer in Canada",
@@ -90,18 +90,26 @@ export default function Services() {
           </div>
         </div>
       </div>
-      <div className="row solution-row">
+      <div className="row solution-row d-none d-md-block">
         <div className="col-md-6 solution-left red"></div>
         <div className="col-md-6 solution-right">
           <div className="col-md-6 solution-content-right ps-5 pt-5">
             <div className="invisible">
+              <h1 className="solution-title">
+                <strong>Clients</strong>
+              </h1>
+              <div className="solution-line mb-3"></div>
               {content.map((contentItem) => {
                 return (
-                  <div className="mb-4">
+                  <div className="mb-5">
                     <h3>
                       <strong>{contentItem.title}</strong>
                     </h3>
-                    <p>{contentItem.description}</p>
+                    <ul>
+                      {contentItem.bullets.map((bullet) => {
+                        return <li>{bullet}</li>;
+                      })}
+                    </ul>
                   </div>
                 );
               })}

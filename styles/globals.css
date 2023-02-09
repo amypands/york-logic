@@ -59,6 +59,7 @@ a {
 .aboutmain {
   background-color: #1a74ea;
   flex-grow: 1;
+  color:#fff;
 }
 
 .aboutmain h1 {

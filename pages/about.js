@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
-import { HeroBanner, Button, Card } from "../components";
+
 
 export default function About() {
   const certList = [
@@ -67,7 +67,7 @@ export default function About() {
               {certList.map((certName) => {
                 return (
                   <div className="col-lg-3 col-md-3 col-sm-1">
-                    <Card>{certName}</Card>
+                    <div>{certName}</div>
                   </div>
                 );
               })}
